@@ -14,9 +14,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'figaro' # configuration framework
 gem 'simple_form' # forms made easy
-gem "font-awesome-rails"
+gem 'font-awesome-sass'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'devise'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 group :development, :test do
   gem 'byebug'
