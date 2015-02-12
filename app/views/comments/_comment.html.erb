@@ -1,0 +1,9 @@
+<ul>
+  <li>
+    <p>
+      <strong><%= comment.content %></strong>
+      <span><i>Posted: <%= time_ago_in_words(comment.created_at) unless comment.created_at.blank? %> ago</i></span>
+
+    </p>
+  </li>
+</ul>
