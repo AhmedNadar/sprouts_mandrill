@@ -32,6 +32,11 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
+
+         # Tell the UserMailer to send a welcome email after save
+        UserMailer.welcome_email(@user).deliver_now
+
+
         format.html { redirect_to @post }
         flash[:success]
         format.json { render :show, status: :created, location: @post }

@@ -22,5 +22,13 @@ module Mandrillmail
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    ActionMailer::Base.smtp_settings = {
+      port:           '587',
+      address:        'smtp.mandrillapp.com',
+      user_name:      ENV["GMAIL_USERNAME"],
+      password:       ENV["MANDRILL_API_KEY"],
+      authentication: :plain
+    }
   end
 end
