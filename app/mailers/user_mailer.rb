@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
 
-  default from: 'notifications@utsoniss.com'
+  default from: 'posts@utsoniss.com'
   layout 'mailer'
 
   def welcome_email(user)
@@ -8,6 +8,6 @@ class UserMailer < ApplicationMailer
     @url  = 'http://localhost:4000/users/sign_in'
     mail(to: @user.email,
          subject: 'Welcome to My Awesome Site'
-         )
+        )
   end
 end

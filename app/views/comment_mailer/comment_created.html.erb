@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Hi <%= @post_user.first_name %></h3>
+    <p>
+      You have recived a comment from <strong><%= @current_user.username %></strong> on your post:<br>
+    </p>
+    <p><%= @title.capitalize %>.</p>
+  </body>
+</html>
